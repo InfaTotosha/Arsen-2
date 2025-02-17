@@ -109,11 +109,67 @@
      max-width: 768px ;
     } 
     .open-menu-btn {
-
+      display: none;
     }
+    .logo {
+      margin-right: 120px;
+    }
+    .header-menu {
+      display: flex;
+      gap: 40px;
+    }
+    
+    .links-nav {
+      color:#2e2f42;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      padding: 24px 0;
+      display: block;
+      transition: color 250ms cubic-berzier(0.4,0,0.2,1);
+    }
+    .links-nav:hover,
+    .links-nav:focus {
+      color: #404bbf;
+    }
+    .current {
+      position: relative;
+      color: #404bbf;
+    }
+    .current::after {
+      container: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 4px;
+      background-color: #404bbf;
+      border-radius: 2px;
+    }
+
+    .address{
+      display: block;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contacts {
+      color: #434455;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      transition: color cubic-bezier(0.4,0,0.2,1);
+    }
+
+ .contacts:hover,
+ .contacts:focus {
+  color: #404bbf;
+ }
    }
 
 
-  /*phone version*/
+  /*pc version*/
 
- 
+ @media  and {min-width: 1158px;
+  
+ }
