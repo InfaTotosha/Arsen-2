@@ -1,23 +1,32 @@
-/*Computer version*/
+/*mobile version*/
 
-.page-header {
+header {
+  display:block;
+  unicode-bidi: isolate;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 0 16px;
+  }
+  
+  .header-menu{
+    display: none;
+  }
+
+  .page-header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 2px 1px rgba( 46,47,66,0.08),
-      0px 1px 1px rgba(46,47,66,0.16)0,
-  0px 1px 6px rgba( 46,47,66,0.08);
   }
   .page-header .container {
     display: flex;
     align-items: center;
   }
+  
   .page-nav {
     display: flex;
   align-items: center;
   }
-  .header-menu{
-    display: flex;
-    gap: 40px;
-  }
+
   .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -53,10 +62,7 @@
   }
     
   .address {
-     color: #2e2f42;
-    text-decoration: none;
-    margin-left: auto;
-    font-style: normal;
+    display: none;
   }  
   
   .links {
@@ -100,6 +106,14 @@
     color: #404bbf;
   }
 
+  .open-menu-btn {
+    padding: 0;
+    line-height: 0;
+    /*background-color: traspatrent; */
+    border: none;
+    cursor: pointer;
+  }
+
 
 
   /*Tablet version*/
@@ -108,16 +122,21 @@
     .container {
      max-width: 768px ;
     } 
-    .open-menu-btn {
-      display: none;
-    }
-    .logo {
-      margin-right: 120px;
+
+    .page-header {
+      border-bottom: 1px solid #e7e9fc;
+      box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     }
     .header-menu {
       display: flex;
       gap: 40px;
     }
+
+    .open-menu-btn {
+      display: none;
+    }
+    
     
     .links-nav {
       color:#2e2f42;
@@ -149,6 +168,11 @@
     }
 
     .address{
+      margin: auto;
+      display: block;
+    }
+
+    .header-address{
       display: block;
       flex-direction: column;
       gap: 12px;
@@ -169,7 +193,35 @@
 
 
   /*pc version*/
-
- @media  and {min-width: 1158px;
-  
- }
+  @media screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+  .logo{
+    margin-right: 76px;
+  }
+  .header-address {
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+  }
+  .contacts {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  }
+  .sec-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 72px;
+    margin-top: 0;
+  }
